@@ -13,4 +13,21 @@ Congratulations on your first Django-powered page.
 
 From now on,we will really start our cp_daileez project!
 To be continue?
+------------------------------------------------------------------------
+Today,I have been edit the settings.py,change the following keys in 
+the DATABASES 'default' item to match our databases connection settings.
 
+After this, I have been run the following command:
+python manage.py syncdb
+Some tables has been created in our databases automaticly.
+| auth_group                 |
+| auth_group_permissions     |
+| auth_message               |
+| auth_permission            |
+| auth_user                  |
+| auth_user_groups           |
+| auth_user_user_permissions |
+| django_content_type        |
+| django_session             |
+| django_site                |
+------------------------------------------------------------------------
