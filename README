@@ -19,7 +19,7 @@ the DATABASES 'default' item to match our databases connection settings.
 
 After this, I have been run the following command:
 python manage.py syncdb
-Some tables has been created in our databases automaticly.
+Some tables has been created in our databases automatically.
 | auth_group                 |
 | auth_group_permissions     |
 | auth_message               |
@@ -30,4 +30,15 @@ Some tables has been created in our databases automaticly.
 | django_content_type        |
 | django_session             |
 | django_site                |
+The default applications are included for the common case, but not everybody needs them. 
+If you don't need any or all of them, feel free to comment-out or delete the appropriate 
+line(s) from INSTALLED_APPS before running syncdb. 
+The syncdb command will only create tables for apps in INSTALLED_APPS.
+------------------------------------------------------------------------
+Our environment -- a "project" -- is set up, we are set to start doing work.
+I have created the app daileez.
+Edit the settings.py file again, and change the INSTALLED_APPS setting to include the string 'daileez'.
+Edit the daileez/models.py,and create class IconType,Icons.
+Run the command 'Python manage.py sql daileez' to see CREATE TABLE SQL statements for the app.
+Run the command 'Python manage.py syncdb' to update our database daileez.
 ------------------------------------------------------------------------
